@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <div class="navbar-left">
+      <h1 class="navbar-title">Restaurant App</h1>
+    </div>
+    
+    <% if user_signed_in? %>
+      <div class="navbar-right">
+        <p class="welcome-message">Welcome, <%= current_user.email %> (<%= current_user.role %>)</p>
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "btn-logout" %>
+        <% unless current_page?(root_path) %>
+          <%=  button_to"Home", root_path, class: "btn home-btn", class: "btn-logout" %>
+      <% end %>
+      </div>
+    <% end %>
+  </nav>

@@ -1,0 +1,11 @@
+<header><%= render partial: 'partial/header' %></header>
+<div class="my_container">
+  <h1 class="dish-title"><%= @dish.name %></h1>
+  <p class="dish-description"><%= @dish.decription %></p>
+  <p class="dish-price">Price: <%= number_to_currency(@dish.price) %></p>
+ 
+
+  <% if user_signed_in? %>
+    <%= link_to "Back to Dishes", restaur_menu_dishes_path(@dish.menu.restaur, @dish.menu), class: "btn back-btn" %>
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+  <header><%= render partial: 'partial/header' %></header>
+  <div class="my_container">
+  
+  <ul class="restaurant-list">
+  <p class="list-title">Restaurant List</p>
+    <% @restaurs.each do |restaur| %>
+      <li class="restaurant-item">
+        <%= link_to restaur.name, restaur_menus_path(restaur), class: "restaurant-link" %>
+        
+        <% if current_user.owner? %>
+          <div class="owner-actions">
+            <%= button_to "Edit", edit_restaur_path(restaur), method: :get, class: "btn edit-btn" %>
+            <%= button_to "Delete", restaur_path(restaur), method: :delete, class: "btn delete-btn" %>
+          </div>
+        <% end %>
+      </li>
+    <% end  %>
+  </ul>
+
+  <% if current_user.owner? %>
+    <%= button_to "New Restaurant", new_restaur_path, method: :get, class: "btn new-restaur-btn" %>
+  <% end %>
+</div>

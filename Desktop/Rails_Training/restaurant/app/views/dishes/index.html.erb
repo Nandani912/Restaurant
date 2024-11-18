@@ -1,0 +1,26 @@
+<header><%= render partial: 'partial/header' %></header>
+<div class="my_container">
+  <h1 class="page-title">Dishes</h1>
+  <ul class="dish-list">
+    <% @dishes.each do |dish| %>
+      <li class="dish-item">
+        <%= link_to dish.name, restaur_menu_dish_path(dish.menu.restaur, dish.menu, dish), class: "dish-link" %>
+        
+        <% if current_user.owner? %>
+          <div class="dish-actions">
+            <%= button_to "Edit Dish", edit_restaur_menu_dish_path(dish.menu.restaur, dish.menu, dish), method: :get, class: "btn edit-btn" %>
+            <%= button_to "Delete Dish", restaur_menu_dish_path(dish.menu.restaur, dish.menu, dish), method: :delete, class: "btn delete-btn" %>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+
+  <% if current_user.owner? %>
+    <%= link_to "Create Dish", new_restaur_menu_dish_path, class: "btn create-btn" %>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <%= link_to "Back to Restaurants", restaurs_path, class: "btn back-btn" %>
+  <% end %>
+</div>

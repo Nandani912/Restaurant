@@ -1,0 +1,353 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body{
+ background-image: url('background.png');
+ background-repeat: no-repeat;
+ width: 98%; 
+ height: 100%;
+ background-size: cover;
+ background-position: center;
+
+ color: #f8f9fa; /* Light text color for better contrast */
+  font-family: Arial, sans-serif;
+}
+/* General styles for the navbar */
+.navbar {
+  background-color: none; /* Black with 70% opacity */
+  color: white; /* Text color */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between left and right */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px; /* Padding */
+  position: relative; /* Ensure it sits above the background */
+  z-index: 10; /* Ensure it is above other elements */
+}
+/* Styles for the title */
+.navbar-title {
+  font-size: 24px; /* Adjust font size */
+  margin: 0; /* Remove default margin */
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Styles for the welcome message */
+.welcome-message {
+  margin: 0; /* Remove default margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
+}
+
+
+/* Styles for the logout button */
+.btn-logout {
+  background-color: #dc3545; /* Classic red for delete button */
+  opacity: 0.8;  /* Change button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 8px 12px; /* Add padding */
+  cursor: pointer; /* Change cursor to pointer */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-logout:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: scale(1.05); 
+  opacity: 0.8; 
+ /* Change background on hover */
+}.my_container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+}
+.list-title {
+  font-size: 24px; /* Larger font size for emphasis */
+  font-weight: bold; /* Bold text for importance */
+  color: #f8f9fa; /* Light color for contrast against dark background */
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below the title */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  letter-spacing: 1px; /* Slightly increase spacing between letters */
+}
+.restaurant-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.restaurant-item {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+  transition: background-color 0.3s; 
+}
+
+.restaurant-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+}
+
+.restaurant-link {
+  text-decoration: none;
+  color: #f8f9fa; /* Light text for readability */
+  font-size: 18px; /* Slightly larger font size */
+  font-weight: bold;
+}
+
+.restaurant-link:hover {
+  color: #b25e73; /* Change color on hover */
+}
+
+.owner-actions {
+  display: flex; /* Enable Flexbox */
+  justify-content: flex-end; /* Align items to the right */
+  gap: 10px; /* Space between buttons */
+  margin-top: 1px; /* Space above the buttons */
+}
+
+.btn {
+  margin-right: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for button hover */
+  font-size: 16px; /* Consistent font size across buttons */
+}
+
+.edit-btn {
+  background-color: #6c757d; /* Classic gray for edit button */
+  opacity: 0.8; 
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #5a6268;/* Darker gray on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.delete-btn {
+  background-color: #dc3545; /* Classic red for delete button */
+  color: white;
+  opacity: 0.8; 
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.new-restaur-btn {
+  margin-top: 20px;
+  background-color: #c6c04f; /* Classic blue for new restaurant button */
+  color: white;
+}
+
+.new-restaur-btn:hover {
+  background-color: #d7ce18; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}.form-group {
+  margin-bottom: 15px;
+  margin-top:50px;
+  /* Space between form groups */
+}
+
+.form-label {
+  display: block; /* Makes labels block elements */
+  font-weight: bold; /* Bold labels for emphasis */
+  margin-bottom: 5px; /* Space below labels */
+  color: #f8f9fa; /* Light color for contrast */
+  
+}
+
+.form-control {
+  width: 90%; /* Full width for text fields */
+  padding: 10px; /* Padding for comfort */
+  border: 1px solid #ced4da; /* Light border color */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #343a40; /* Dark background for input fields */
+  color: #f8f9fa; /* Light text color */
+  transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.form-control:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.submit-btn {
+  background-color: #007bff; /* Classic blue for submit button */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Padding for the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.page-title {
+  color: #f8f9fa; /* Light color for the title */
+  font-size: 24px; /* Font size for the title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.menu-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+.menu-item {
+  margin-bottom: 15px; /* Space between menu items */
+  padding: 10px; /* Padding for each item */
+  background-color: none; /* Dark background for menu items */
+  border-radius: 5px; /* Rounded corners */
+  color: #f8f9fa; /* Light text color */
+}
+
+.menu-link {
+  color: white; /* Classic blue for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold link text */
+  font-size: 18px; /* Font size for menu titles */
+}
+.menu-link:hover {
+  color:#dc3545;
+}
+
+.menu-actions {
+  margin-top: 10px; /* Space above action buttons */
+  display: flex; /* Use Flexbox for alignment */
+  gap: 10px; /* Space between buttons */
+}
+
+.edit-btn, .delete-btn {
+  padding: 10px 15px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+.create-btn, .back-btn{
+  padding: 8px 10px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-weight: bold; /* Bold text */
+  text-decoration: n;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.edit-btn {
+  background-color: #6c757d;
+  opacity: 0.8; 
+  color: white; /* Classic gray for edit button */
+}
+
+.edit-btn:hover {
+  background-color: #5a6268; /* Darker gray on hover */
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  opacity: 0.8; 
+  color: white; /* Classic red for delete button */
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.create-btn, .back-btn {
+  background-color: #c6c04f;
+}
+
+.create-btn:hover, .back-btn:hover {
+  background-color:  #d7ce18; /* Darker blue on hover */
+}
+.dish-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+.dish-item {
+  margin-bottom: 15px; /* Space between dish items */
+  padding: 10px; /* Padding for each item */
+  background-color:none; /* Dark background for dish items */
+  border-radius: 5px; /* Rounded corners */
+  color: #f8f9fa; /* Light text color */
+}
+
+.dish-link {
+  color: white; /* Classic blue for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold link text */
+  font-size: 18px; /* Font size for dish titles */
+}
+
+.dish-link:hover {
+  color:#dc3545;; /* Underline on hover for links */
+}
+
+.dish-actions {
+  margin-top: 10px; /* Space above action buttons */
+  display: flex; /* Use Flexbox for alignment */
+  gap: 10px; /* Space between buttons */
+}
+.form-title {
+  font-size: 24px; /* Font size for the title */
+  margin-bottom: 20px; /* Space below the title */
+  color: #343a40; /* Dark text color */
+}
+
+.field {
+  margin-bottom: 15px; /* Space between fields */
+}
+
+.input-field {
+  width: 90%; /* Full width for input fields */
+  padding: 10px; /* Padding inside the input */
+  border: 1px solid #ced4da; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.input-field:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.actions {
+  margin-top: 20px; /* Space above the actions */
+}
+
+.sign-up-btn {
+  background-color: #366f43; /* Green background for sign up */
+}
+
+.sign-up-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
